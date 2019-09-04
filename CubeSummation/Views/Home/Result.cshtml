@@ -1,0 +1,31 @@
+﻿@model CubeSummation.Models.TestCaseResultModel
+
+@{
+    ViewBag.Title = "Cube Summation - Result";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>Test Case</h3>
+    </div>
+    <div class="col-md-6">
+        <h3>Result</h3>
+    </div>
+    <div class="col-md-6">
+        <div class="test-case-readonly">
+            <span style="white-space: pre-line">@Html.DisplayFor(m => m.Conten)</span>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="test-case-result">
+            <ul class="list-group">
+                @foreach (var r in Model.Result)
+                {
+                    <li class="list-group-item">@r</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+
